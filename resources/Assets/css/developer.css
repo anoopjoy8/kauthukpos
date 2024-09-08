@@ -1,0 +1,61 @@
+.login-button{
+    border: 0px !important;
+    padding: 0px !important;
+    color : white !important;
+}
+.iconRight{
+    margin-left: 30%;
+  }
+  .iconDown{
+    margin-left:30%;
+  }
+  .iconRight.hidden {
+    transition: width 2s;
+    display: none;
+  }
+  .iconDown.hidden {
+    transition: width 2s;
+    display: none;
+  }
+  .menu-click{
+    cursor: pointer;
+  }
+  .collapse {
+    max-height: 0 !important;
+    overflow: hidden !important;
+  }
+  .collapse.show {
+    max-height: 500px !important; /* Adjust this value based on your content */
+  }
+  .nav-link i.menu-icon {
+    margin-right: 10px; /* Adjust the spacing as needed */
+  }
+  .iconRight, .iconDown {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+  }
+  .iconRight i, .iconDown i {
+    width: 20px; /* Fixed width for the icons */
+    text-align: right; /* Aligns the icon to the right */
+  }
+  
+  a[aria-expanded="true"]{
+    color: white !important;
+  }
+  .nav-item {
+    transition: all 0.5s ease !important
+  }
+  .nav-link{
+    font-weight:600 !important;
+  }
+  .nav-link[aria-expanded="true"] .iconRight {
+    transform: rotate(90deg) !important;
+  }
+  .nav-item.active .nav-link {
+    color: white !important;
+  }
+  .add-button{
+    text-align: right !important;
+    padding: 0 !important;
+  }
