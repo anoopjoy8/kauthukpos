@@ -20,7 +20,7 @@ const menuData = [
         name: "Products", 
         iconName: "store",
         subMenu: [
-            { id: 2.1, name: "List Page", link: "pages/ui-features/buttons.html" },
+            { id: 2.1, name: "List Product", link: "/products" },
             { id: 2.2, name: "Add Page", link: "pages/ui-features/dropdowns.html" },
             { id: 2.3, name: "Delete Page", link: "pages/ui-features/typography.html" }
         ] 

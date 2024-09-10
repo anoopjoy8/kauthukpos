@@ -5,6 +5,7 @@ const urlConstants = {
   LOGIN_URL: "login",
   CREATE_URL : "register",
   GET_All_AdminUser_URL: "adminusers",
-  GET_All_AdminUserRoles: "adminuserroles"
+  GET_All_AdminUserRoles: "adminuserroles",
+  GET_ALL_PRODUCTS : "products"
 };
 export default urlConstants;

@@ -4,10 +4,12 @@ use App\Http\Middleware\AdminUserPass;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\ProductController;
 
 Route::middleware([EnsureTokenIsValid::class])->group(function () {
     Route::get('adminusers', [AdminUserController::class, 'getAllAdminUsers']);
     Route::get('adminuserroles', [AdminUserController::class, 'getAdminUserRoles']);
+    Route::get('products', [ProductController::class, 'getAllProducts']);
 });
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);

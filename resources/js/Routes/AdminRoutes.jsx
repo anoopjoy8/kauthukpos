@@ -7,6 +7,7 @@ import User from '../Pages/User';
 import AddUser from '../Pages/AddUser';
 import { Provider } from "react-redux";
 import store from "../store";
+import Products from '../Pages/Products';
 
 const AdminRoutes = () => (
   <Provider store={store}>
@@ -17,6 +18,7 @@ const AdminRoutes = () => (
         <Route path='dashboard' element={<Dashboard />} />
         <Route path='user' element = {<User />} />
         <Route path='add-user' element = {<AddUser />} />
+        <Route path='products' element = {<Products />} />
       </Route>
     </Routes>
   </Provider>

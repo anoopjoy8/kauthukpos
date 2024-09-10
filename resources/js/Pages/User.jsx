@@ -12,7 +12,11 @@ function User() {
   useEffect(() => {
     dispatch(getAdminUsers());
   }, []);
-  const tableHeaders = ['Name', 'Role', 'Status'];
+  const tableHeaders = [
+    {Title: 'Name', value: 'Name', type: 'text'},
+    {Title: 'Role', value: 'Role', type: 'num'},
+    {Title: 'Status', value: 'Status', type: 'status'}
+  ];
   return (
     <>
       <ModalPopup 

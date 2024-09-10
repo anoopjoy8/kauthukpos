@@ -23,7 +23,7 @@ function Table({headers, data, addButtonLink}) {
                             <thead>
                                 <tr>
                                 {headers.map((header, index) => (
-                                    <th key={index}>{header}</th>
+                                    <th key={index}>{header.Title}</th>
                                 ))}
                                 </tr>
                             </thead>
@@ -33,11 +33,13 @@ function Table({headers, data, addButtonLink}) {
                                     <tr key={rowIndex}>
                                     {headers.map((header, colIndex) => (
                                         <td key={colIndex}>
-                                            {header === "Status" ? (
-                                                <label className={getBadgeClass(row[header])}>{row[header]}</label>
-                                            ) : (
-                                                row[header] !== null && row[header] !== undefined ? row[header] : 'N/A'
-                                            )}
+                                        {header.type === "status" ? (
+                                            <label className={getBadgeClass(row[header.value])}>
+                                            {row[header.value]}
+                                            </label>
+                                        ) : (
+                                            row[header.value] != null ? row[header.value] : 'N/A'
+                                        )}
                                         </td>
                                     ))}
                                     </tr>
@@ -49,7 +51,7 @@ function Table({headers, data, addButtonLink}) {
                                     </td>
                                 </tr>
                                 )}
-                            </tbody>
+                            </tbody>        
                         </table>
                     </div>
                 </div>
