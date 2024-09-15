@@ -32,7 +32,7 @@ class User extends Authenticatable implements JWTSubject
      */
     const CREATED_AT = 'fldCreatedAt';
     const UPDATED_AT = 'fldUpdatedAt';
-    protected $table = 'tbladminUsers';
+    protected $table = 'tblAdminUsers';
     protected $hidden = [
         'fldpassword',
         'remember_token',

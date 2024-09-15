@@ -1,6 +1,6 @@
 import React from 'react'
 import face from '../../../Assets/images/user_large.jpg'
-import '../../../Assets/css/Developer.css'
+import '../../../Assets/css/developer.css'
 
 function Profile() {
   return (

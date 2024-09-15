@@ -23,7 +23,7 @@ class Products extends Model
     const UPDATED_AT = 'fldUpdatedAt';
     protected $table = 'product';
 
-    public function getAllproducts()
+    public function getAllproducts($limit,$offset)
     {
         $products = DB::select("
             SELECT 
@@ -38,6 +38,7 @@ class Products extends Model
                 product P
                 LEFT JOIN category C ON C.id = P.cat_id
                 LEFT JOIN sub_category SC ON SC.id = P.subcat_id
+            LIMIT $limit OFFSET $offset;
         ");
         return $products;
     }

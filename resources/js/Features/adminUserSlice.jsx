@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addAdminUsers } from "../Actions/AdminUserAction";
+import { addAdminUsers } from "../Actions/adminUserAction";
 
 const initialState = {
     adminUserLoading: false,

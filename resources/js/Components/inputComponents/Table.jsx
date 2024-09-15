@@ -1,7 +1,13 @@
 import React from 'react'
 import AddButton from '../Common/AddButton';
+import LoadMoreButton from '../Common/LoadMoreButton';
 
-function Table({headers, data, addButtonLink}) {
+function Table({headers, 
+    data, 
+    addButtonLink,
+    handleLoadMore,
+    isLoading
+}) {
     const getBadgeClass = (status) => {
         return status === 'Active' ? 'badge badge-success' : 'badge badge-warning';
     };
@@ -51,8 +57,13 @@ function Table({headers, data, addButtonLink}) {
                                     </td>
                                 </tr>
                                 )}
-                            </tbody>        
+                            </tbody>
                         </table>
+                    </div>
+                    <div className="d-flex justify-content-center mt-3">
+                        <LoadMoreButton onClick = {handleLoadMore}
+                            isLoading = {isLoading}
+                        />
                     </div>
                 </div>
             </div>

@@ -6,11 +6,11 @@ use App\Models\Products;
 
 class ProductController extends Controller
 {
-    public function getAllProducts()
+    public function getAllProducts(Request $request)
     {
         try {
             $ProductModel = new Products();
-            $products = $ProductModel->getAllproducts();
+            $products = $ProductModel->getAllproducts($request->limit,$request->offset);
             $productsData = [];
             foreach ($products as $product) {
                 $productsData[] = [

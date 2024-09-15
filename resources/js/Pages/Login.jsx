@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import logo from '../../Assets/images/logo.svg';
-import '../../Assets/Css/style.css';
+import '../../Assets/css/style.css';
 import '../../Assets/css/loader.css'
 import saveUserInfo from '../Util/LoginUtil.jsx';
 import Loading from '../Components/Common/Loader.jsx'

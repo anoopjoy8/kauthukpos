@@ -8,7 +8,7 @@ import {
   productsModal
 } from "../Features/productsSlice";
 
-export const getAllProducts = () => async (dispatch) => {
+export const getAllProducts = (limit,offset) => async (dispatch) => {
   try {
     const config = {
       headers: {
@@ -19,8 +19,10 @@ export const getAllProducts = () => async (dispatch) => {
 
     dispatch(productsReq());
     
-    const { data } = await axiosConfig.get(c.GET_ALL_PRODUCTS,config);
-    dispatch(productsSuccess(data));
+    const { data } = await axiosConfig.get(`${c.GET_ALL_PRODUCTS}?limit=${limit}&offset=${offset}`,
+      config
+    );
+    dispatch(productsSuccess(data,offset));
   } catch (error) {
     const errorIs =
       error.response && error.response.data.message

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../../Assets/css/Developer.css";
+import "../../../Assets/css/developer.css";
 import "@mdi/font/css/materialdesignicons.min.css";
 import menuData from "../../Data/Menudata";
 import { useLocation } from "react-router-dom";

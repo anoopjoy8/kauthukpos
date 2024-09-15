@@ -21,7 +21,7 @@ class AdminUserRoles extends Model
      */
     const CREATED_AT = 'fldCreatedAt';
     const UPDATED_AT = 'fldUpdatedAt';
-    protected $table = 'tbladminuserroles';
+    protected $table = 'tblAdminUserRoles';
 
     public function getAlladminUsers()
     {
@@ -37,7 +37,7 @@ class AdminUserRoles extends Model
                 AUR.fldRoleTitle AS Role
             FROM 
                 tblAdminUsers AU
-                INNER JOIN tbladminuserroles AUR ON AUR.fldAdminUserRoleID = AU.fldRole 
+                INNER JOIN tblAdminUserRoles AUR ON AUR.fldAdminUserRoleID = AU.fldRole 
         ");
         return $adminUsers;
     }
@@ -48,7 +48,7 @@ class AdminUserRoles extends Model
                 AUR.fldRoleTitle,
                 AUR.fldAdminUserRoleId
             FROM 
-                tbladminuserroles AUR
+                tblAdminUserRoles AUR
             WHERE 
                 fldStatus = 1'
         );
