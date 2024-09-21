@@ -1,10 +1,14 @@
 import React from 'react'
 
-function SubmitButton() {
+function SubmitButton(props) {
   return (
     <>
-        <button type="submit" className="btn btn-primary me-2"> Submit </button>
-        <button className="btn btn-light">Cancel</button>
+      {props.type === 'add' ? (
+        <button type="submit" className="btn btn-primary me-2">Submit</button>
+      ) : (
+        <button type="submit" className="btn btn-primary me-2">Update</button>
+      )}
+      <button className="btn btn-light">Cancel</button>
     </>
   )
 }

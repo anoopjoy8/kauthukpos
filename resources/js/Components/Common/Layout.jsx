@@ -17,9 +17,9 @@ function Layout() {
                     <div className='main-panel'>
                         <div className='content-wrapper pb-0'>
                             <PageHeader/>
-                            <div class="col-lg-12 grid-margin stretch-card">
+                            
                                 <LoginOutlet/>
-                            </div>
+                            
                         </div>
                     </div>
                 </div> 

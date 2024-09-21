@@ -39,7 +39,6 @@ function AddUser() {
     });
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        console.log(event.target)
         setFormData(prevData => ({
           ...prevData,
           [name]: value
@@ -95,7 +94,7 @@ function AddUser() {
                     <Text title = "Name"
                         name="name"
                         id = "name"
-                        value = "Anoop"
+                        value = ""
                         placeHolder = "Name"
                         required = "true"
                         error={errors.name}

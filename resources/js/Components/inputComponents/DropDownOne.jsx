@@ -10,17 +10,21 @@ function DropDownOne(props) {
         </label>
         <select class="form-control" 
           id={props.id}
+          value={props.value || ''}
           name={props.name}
           onChange={props.onChange}
         >
           {options.length === 0 ? (
             <option value="">Select</option>
           ) : (
-            options.map((item, index) => (
-              <option key={index} value={item.fldAdminUserRoleId}>
-                {item.fldRoleTitle}
-              </option>
-            ))
+            <>
+              <option value="">Select</option>
+              {options.map((item, index) => (
+                <option key={index} value={item.value}>
+                  {item.title}
+                </option>
+              ))}
+            </>
           )}
         </select>
         {props.error && <div className="invalid-feedback d-block">{props.error}</div>}

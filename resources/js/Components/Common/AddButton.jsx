@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 function AddButton(props) {
   return (
-    <div className="col-md-6 d-flex justify-content-end">
-      <Link
-        className="btn btn-primary btn-icon-text d-flex align-items-center"
-        to={props.link}
-      >
-        <i class="mdi mdi-plus btn-icon-prepend me-2"></i>
-        {props.title}
-      </Link>
-    </div>
+    
+    <Link
+      className="btn btn-primary btn-icon-text d-flex align-items-center add-link"
+      to={props.link}
+    >
+      <i class="mdi mdi-plus btn-icon-prepend me-2"></i>
+      {props.title}
+    </Link>
+ 
   )
 }
 

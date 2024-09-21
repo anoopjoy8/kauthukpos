@@ -10,6 +10,11 @@ Route::middleware([EnsureTokenIsValid::class])->group(function () {
     Route::get('adminusers', [AdminUserController::class, 'getAllAdminUsers']);
     Route::get('adminuserroles', [AdminUserController::class, 'getAdminUserRoles']);
     Route::get('products', [ProductController::class, 'getAllProducts']);
+    Route::get('product-categories', [ProductController::class, 'getAllProductCategories']);
+    Route::get('product-sub-categories/{category}', [ProductController::class, 'getProductSubCategory']);
+    Route::post('add-product', [productController::class, 'addNewProduct']);
+    Route::get('edit-product/{productID}', [ProductController::class, 'editProductData']);
+    Route::post('update-product', [productController::class, 'updateProduct']);
 });
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);

@@ -59,3 +59,21 @@
     text-align: right !important;
     padding: 0 !important;
   }
+  .cursor-point{
+    cursor: pointer;
+  }
+  .form-check:has(.check-padding) {
+    padding-left: -15px !important;
+  }
+  .no-background{
+    background: transparent !important;
+    border: 0px !important;
+    margin-bottom: 10px !important;
+  }
+  .page-header{
+    margin-bottom: 2px !important;
+  }
+  .search-link{
+    margin-right: 6px !important;
+    cursor: pointer;
+  }

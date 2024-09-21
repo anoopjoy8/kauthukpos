@@ -2,14 +2,14 @@ import React from 'react'
 
 function EmailOne(props) {
   return (
-    <div class="form-group">
+    <div className="form-group">
       <label for="exampleInputEmail3">
         {props.title}
         {props.required && <span className="text-danger ml-1">*</span>}
       </label>
       <input 
         type="email" 
-        class="form-control" 
+        className="form-control" 
         id={props.id}
         name = {props.name}
         placeholder={props.placeHolder}

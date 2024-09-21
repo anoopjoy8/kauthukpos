@@ -8,10 +8,11 @@ function Text(props) {
           {props.required && <span className="text-danger ml-1">*</span>}
         </label>
         <input 
-          type="text" 
+          type={props.type ? props.type : "text"} 
           className="form-control" 
           id={props.id}
           name={props.name}
+          value={props.value}
           placeholder={props.placeHolder}
           onChange={props.onChange}
         />

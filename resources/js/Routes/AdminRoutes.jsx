@@ -8,6 +8,7 @@ import AddUser from '../Pages/AddUser';
 import { Provider } from "react-redux";
 import store from "../store";
 import Products from '../Pages/Products';
+import AddProduct from '../Pages/AddProduct';
 
 const AdminRoutes = () => (
   <Provider store={store}>
@@ -19,6 +20,8 @@ const AdminRoutes = () => (
         <Route path='user' element = {<User />} />
         <Route path='add-user' element = {<AddUser />} />
         <Route path='products' element = {<Products />} />
+        <Route path='add-product' element = {<AddProduct />} />
+        <Route path="/edit-product/:id" element={<AddProduct />} />
       </Route>
     </Routes>
   </Provider>

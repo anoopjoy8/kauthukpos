@@ -6,6 +6,11 @@ const urlConstants = {
   CREATE_URL : "register",
   GET_All_AdminUser_URL: "adminusers",
   GET_All_AdminUserRoles: "adminuserroles",
-  GET_ALL_PRODUCTS : "products"
+  GET_ALL_PRODUCTS : "products",
+  GET_All_PRODUCT_CATEGORIES : "product-categories",
+  GET_PRODUCT_SUB_CATEGORIES : "product-sub-categories/",
+  ADD_PRODUCT : "add-product",
+  EDIT_PRODUCT : "edit-product/",
+  UPDATE_PRODUCT : "update-product"
 };
 export default urlConstants;

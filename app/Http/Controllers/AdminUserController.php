@@ -31,12 +31,18 @@ class AdminUserController extends Controller
         try {
             $adminUserRoles = new AdminUserRoles();
             $getAlladminUserRoles = $adminUserRoles->getAlladminUserRoles();
-
+            $adminUserRolesData = [];
+            foreach ($getAlladminUserRoles as $adminRoles) {
+                $adminUserRolesData[] = [
+                    'title'            => $adminRoles->fldRoleTitle,
+                    'value'            => $adminRoles->fldAdminUserRoleId
+                ];
+            }
             // You might want to transform $adminUsers here if needed
 
             return response()->json([
                 'success' => true,
-                'data' => $getAlladminUserRoles
+                'data' => $adminUserRolesData
             ]);
         } catch (\Exception $e) {
             return response()->json([

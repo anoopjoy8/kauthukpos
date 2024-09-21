@@ -29,6 +29,8 @@ function User() {
         <Table headers = {tableHeaders}
           data={adminUser?.data || []}
           addButtonLink = "/add-user"
+          tableTitle = "List Admin Users"
+          addTitle = "Add Users"
         />
     </>
   );
